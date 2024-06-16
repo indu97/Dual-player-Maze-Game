@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+        <h1>
+            Welcome to Padma Vyuham!
+        </h1>
+    </div>
+    <div class="center">
+        <div>
+            <a href="createGame.html">  
+                <button id="createGame" class="button">Create game room</button>
+            </a>
+            <a href="joingame.html">
+                <button id="joinGame" class="button">Join game room</button>   
+            </a>   
+        </div>
+    </div>
+<!-- <script src="js/welcome.js"></script> -->
+<script>
+    var isHost = localStorage.getItem("isHost");
+    localStorage.setItem("isHost", false);
+</script>
+</body>
+</html>

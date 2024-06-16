@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Join Game Page</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h3>
+            Join Game Room :)
+        </h3>
+        <h4>Enter the Player name and Room number you wish to Join</h4>
+        <div class="center">
+            <form action="lobby.html" method="get" id="joinRoomForm">
+                <label for="playerName"> Player Name</label>
+                <input type="text" id="playerName" required><br><br>
+                <label for="roomNumber">Room Number</label>
+                <input type="text" id="roomNumber" required><br><br>
+            
+                <!-- <input type="submit" value="Join Room"></input> -->
+            </form>
+        </div>
+        
+        <div class="submit-center">
+            <a href="joingame.html">  
+                <button id="joinRoomButton" type="submit" form="joinRoomForm" value="Submit" class="button">Submit</button>
+            </a>
+        </div>
+         
+        <script>
+            var isHost = localStorage.getItem("isHost");
+            localStorage.setItem("isHost", false);  
+        </script>
+        <script src="js/joingame.js"></script>
+
+    </body>
+</html>

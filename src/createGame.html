@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Create Game Page</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h3>
+            Create Game Room :)
+        </h3>
+        <h4>Enter the Player name and Room number you wish to create</h4>
+        <div class="center">
+            <form action="lobby.html" method="get" id="createRoomForm">
+                <label for="playerName"> Player Name </label>
+                <input type="text" id="playerName" required><br><br>
+                <label for="roomNumber">Room Number</label>
+                <input type="text" id="roomNumber" required><br><br>
+            </form>
+        </div>
+        <div class="submit-center">
+            <a href="lobby.html">  
+                <button id="createRoomButton" type="submit" form="createRoomForm" value="Submit" class="button">Submit</button>     
+            </a>
+        </div>
+        <script>
+            var isHost = localStorage.getItem("isHost");
+            localStorage.setItem("isHost", false);
+        </script>
+        <script src="js/creategame.js"></script>
+    </body>
+</html>
